@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tycho.test.rcp.feature.mps"
+      label="MPS Support"
+      version="0.3.4.qualifier"
+      plugin="com.tycho.test.rcp.core">
+
+   <plugin
+         id="com.tycho.test.rcp.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
