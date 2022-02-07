@@ -127,5 +127,12 @@
           <!-- features and plugins -->
           <!-- MPS -->
           <module>../MPS</module>
+          
+          <module>../com.tycho.test.rcp.product</module>
+          <module>../com.tycho.test.rcp.releng.product</module>
+          
+          <!-- Tests -->
+          <module>../MPS/com.tycho.test.rcp.core.test</module>
+          <module>../com.tycho.test.rcp.product.tests</module>
      </modules>
 </project>
