@@ -24,15 +24,22 @@
                     <!-- Explicit execution of the integration-test: without 
                          this the integration-test goal is not executed. With this the goal is executed 
                          but no IT test is run -->
-                    <executions>
-                         <execution>
-                              <id>it-test</id>
-                              <phase>integration-test</phase>
-                              <goals>
-                                   <goal>integration-test</goal>
-                              </goals>
-                         </execution>
-                    </executions>
+<!--                     <executions> -->
+<!--                          <execution> -->
+<!--                               <id>it-test</id> -->
+<!--                               <phase>integration-test</phase> -->
+<!--                               <goals> -->
+<!--                                    <goal>integration-test</goal> -->
+<!--                               </goals> -->
+<!--                          </execution> -->
+<!--                     </executions> -->
+                    
+                    <configuration>
+                         <useUIHarness>false</useUIHarness>
+                         <useUIThread>false</useUIThread>
+                         <product>mas.product</product>
+                         <application>org.eclipse.ui.ide.workbench</application>
+                    </configuration>
                </plugin>
           </plugins>
      </build>

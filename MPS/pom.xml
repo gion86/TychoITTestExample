@@ -18,7 +18,8 @@
           <!-- features and plugins -->
 
           <!-- MPS -->
+          <module>com.tycho.test.rcp.feature.mps</module>
           <module>com.tycho.test.rcp.core</module>
-          <module>com.tycho.test.rcp.core.test</module>
+          
      </modules>
 </project>
