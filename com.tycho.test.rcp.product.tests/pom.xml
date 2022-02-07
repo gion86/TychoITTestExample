@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+     <modelVersion>4.0.0</modelVersion>
+     <artifactId>com.tycho.test.rcp.product.tests</artifactId>
+     <version>1.0.0-SNAPSHOT</version>
+     <packaging>eclipse-test-plugin</packaging>
+
+     <parent>
+          <groupId>com.tycho.test</groupId>
+          <artifactId>com.tycho.test.rcp.releng</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <relativePath>../com.tycho.test.rcp.releng</relativePath>
+     </parent>
+
+     <dependencies>
+          <dependency>
+               <groupId>junit</groupId>
+               <artifactId>junit</artifactId>
+               <version>4.12</version>
+               <scope>test</scope>
+          </dependency>
+     </dependencies>
+
+     <build>
+          <sourceDirectory>src</sourceDirectory>
+          <plugins>
+
+               <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-surefire-plugin</artifactId>
+                    <configuration>
+                         <dependencies>
+                              <!-- avoid CNFE in Surefire when looking for 
+                                   JUnitPlatformProvider -->
+                              <dependency>
+                                   <artifactId>org.junit</artifactId>
+                                   <type>eclipse-plugin</type>
+                              </dependency>
+                         </dependencies>
+                         <providerHint>junit4</providerHint>
+
+                         <useUIHarness>false</useUIHarness>
+                         <useUIThread>false</useUIThread>
+                         <product>mas.product</product>
+                         <application>org.eclipse.ui.ide.workbench</application>
+                    </configuration>
+               </plugin>
+          </plugins>
+     </build>
+</project>

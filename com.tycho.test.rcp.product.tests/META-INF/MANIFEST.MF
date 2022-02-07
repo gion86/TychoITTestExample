@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: com.tycho.test.rcp.product.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TYCHO
+Fragment-Host: com.tycho.test.rcp.product;bundle-version="0.2.4"
+Automatic-Module-Name: com.tycho.test.rcp.product.tests
+Require-Bundle: org.junit;bundle-version="4.12.0"
